@@ -1,0 +1,256 @@
+
+
+@font-face {
+  font-family: Play;
+  src: url(Fonts/Play/Play-Bold.ttf);
+  src: url(Fonts/Play/Play-Regular.ttf);
+}
+
+
+
+body {
+
+  font-family: Play;
+  background-color: #e0f0e4;
+}
+
+.eventname{
+
+  font-size: 65px;
+  color: #582707 ;
+  
+}
+
+.like-button {
+  width: 210px;
+  height: 50px;
+  max-width: 100%; 
+  max-height: 100%;
+  background:#1C3A13;
+  color: #f1f1f1;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  line-height: 50px;
+  z-index: 999;
+  transition: .6s linear;
+  border-radius: 40px;
+
+}
+
+
+.like-button .heart-icon {
+  height: 100px;
+  width: 100px;
+  background: url("Images/heart.png");
+  background-position: left;
+  cursor: pointer;
+  position: absolute;
+}
+
+.like-button .heart-icon.liked {
+  animation: like-anim 0.7s steps(28) forwards;
+}
+
+@keyframes like-anim {
+  to {
+    background-position: right;
+  }
+}
+
+.like-button .heart-bg {
+  background: rgba(255, 192, 200, 0);
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 100ms ease;
+}
+
+.like-button .heart-bg:hover {
+  background: rgba(255, 192, 200, 0.7);
+}
+
+.like-button {
+  display: flex;
+  align-items: center;
+}
+
+.like-button .likes-amount {
+  font-size: 21px;
+  font-family: "Play", sans-serif;
+  color: #888;
+  font-weight: 900;
+  max-width: 100%; 
+  max-height: 100%;
+  margin-left: 1px;
+}
+
+.save-button {
+  width: 210px;
+  height: 50px;
+  max-width: 100%; 
+  max-height: 100%;
+  background:#1C3A13;
+  color: #f1f1f1;
+  text-align: center;
+  line-height: 50px;
+  z-index: 999;
+  transition: .6s linear;
+  border-radius: 40px;
+
+}
+
+.like-button:hover{
+  transform: scale(1.1);
+}
+
+.save-button:hover{
+  transform: scale(1.1);
+}
+
+.share-button{
+  width: 210px;
+  height: 50px;
+  background: #BBDB9B;
+  text-align: center;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: .3s linear;
+}
+
+.share-button:hover{
+  transform: scale(1.1);
+}
+
+.share-button span{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #1C3A13;
+  color: #f1f1f1;
+  text-align: center;
+  line-height: 50px;
+  z-index: 999;
+  transition: .6s linear;
+  border-radius: 40px;
+}
+
+.share-button:hover span{
+  transform: translateX(-100%);
+  transition-delay: .3s;
+}
+
+.share-button a{
+  flex: 1;
+  font-size: 26px;
+  color: #1C3A13;
+  text-align: center;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: 0.3s linear;
+}
+
+.share-button:hover a{
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.share-button a:nth-of-type(1){
+  transition-delay: 1s;
+}
+
+.share-button a:nth-of-type(2){
+  transition-delay: 0.8s;
+}
+
+.share-button a:nth-of-type(3){
+  transition-delay: 0.6s;
+}
+
+.share-button a:nth-of-type(4){
+  transition-delay: 0.4s;
+}
+
+.inputbox {
+  position: relative;
+  width: 196px;
+}
+
+.inputbox input {
+  position: relative;
+  width: 100%;
+  padding: 20px 10px 10px;
+  background: transparent;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  color: #23242a;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  z-index: 10;
+}
+
+.inputbox span {
+  position: absolute;
+  left: 0;
+  padding: 20px 10px 10px;
+  font-size: 1em;
+  color: #BBDB9B;
+  letter-spacing: 00.05em;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.inputbox input:valid ~span,
+.inputbox input:focus ~span {
+  color: #BBDB9B;
+  transform: translateX(-10px) translateY(-34px);
+  font-size: 0,75em;
+}
+
+.inputbox i {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #BBDB9B;
+  border-radius: 4px;
+  transition: 0.5s;
+  pointer-events: none;
+  z-index: 9;
+}
+
+.card {
+  box-sizing: border-box;
+  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(6px);
+  cursor: pointer;
+  transition: all 0.5s;
+  display: flex;
+  
+}
+
+.card:hover {
+
+  transform: scale(1.05);
+}
+
+.card:active {
+  transform: scale(0.95) rotateZ(1.7deg);
+}
+
+.inputbox input:valid ~i,
+.inputbox input:focus ~i {
+  height: 44px;
+}
+
