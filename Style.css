@@ -1,43 +1,39 @@
-
-
 @font-face {
   font-family: Play;
   src: url(Fonts/Play/Play-Bold.ttf);
   src: url(Fonts/Play/Play-Regular.ttf);
 }
 
-
-
-body {
-
-  font-family: Play;
-  background-color: #e0f0e4;
+@font-face {
+  font-family: Poppins;
+  src: url(Fonts/Poppins/Poppins-Regular.ttf);
 }
 
-.eventname{
+body {
+  font-family: Poppins;
+  background-color: rgb(243, 242, 239);
+}
 
+.eventname {
   font-size: 65px;
-  color: #582707 ;
-  
+  color: #582707;
 }
 
 .like-button {
   width: 210px;
   height: 50px;
-  max-width: 100%; 
+  max-width: 100%;
   max-height: 100%;
-  background:#1C3A13;
+  background: linear-gradient(90deg, #1c3a13, #4d6347);
   color: #f1f1f1;
   text-align: center;
   align-items: center;
   justify-content: center;
   line-height: 50px;
   z-index: 999;
-  transition: .6s linear;
+  transition: 0.6s linear;
   border-radius: 40px;
-
 }
-
 
 .like-button .heart-icon {
   height: 100px;
@@ -83,38 +79,38 @@ body {
   font-family: "Play", sans-serif;
   color: #888;
   font-weight: 900;
-  max-width: 100%; 
+  max-width: 100%;
   max-height: 100%;
   margin-left: 1px;
+}
+
+.like-button:hover {
+  transform: scale(1.1);
 }
 
 .save-button {
   width: 210px;
   height: 50px;
-  max-width: 100%; 
+  max-width: 100%;
   max-height: 100%;
-  background:#1C3A13;
+  background: linear-gradient(90deg, #1c3a13, #4d6347);
   color: #f1f1f1;
   text-align: center;
   line-height: 50px;
   z-index: 999;
-  transition: .6s linear;
+  transition: 0.6s linear;
   border-radius: 40px;
-
 }
 
-.like-button:hover{
+
+.save-button:hover {
   transform: scale(1.1);
 }
 
-.save-button:hover{
-  transform: scale(1.1);
-}
-
-.share-button{
+.share-button {
   width: 210px;
   height: 50px;
-  background: #BBDB9B;
+  background: #bbdb9b;
   text-align: center;
   border-radius: 40px;
   display: flex;
@@ -123,114 +119,64 @@ body {
   overflow: hidden;
   position: relative;
   cursor: pointer;
-  transition: .3s linear;
+  transition: 0.3s linear;
+  z-index: 1;
 }
 
-.share-button:hover{
+.share-button:hover {
   transform: scale(1.1);
 }
 
-.share-button span{
+.share-button span {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #1C3A13;
+  background: linear-gradient(90deg, #1c3a13, #4d6347);
   color: #f1f1f1;
   text-align: center;
   font-size: 20px;
   line-height: 50px;
   z-index: 999;
-  transition: .6s linear;
+  transition: 0.6s linear;
   border-radius: 40px;
 }
 
-.share-button:hover span{
+.share-button:hover span {
   transform: translateX(-100%);
-  transition-delay: .3s;
-
+  transition-delay: 0.3s;
 }
 
-.share-button a{
+.share-button a {
   flex: 1;
   font-size: 26px;
-  color: #1C3A13;
+  color: #1c3a13;
   text-align: center;
   transform: translateX(-100%);
   opacity: 0;
   transition: 0.3s linear;
 }
 
-.share-button:hover a{
+.share-button:hover a {
   opacity: 1;
   transform: translateX(0);
 }
 
-.share-button a:nth-of-type(1){
+.share-button a:nth-of-type(1) {
   transition-delay: 1s;
 }
 
-.share-button a:nth-of-type(2){
+.share-button a:nth-of-type(2) {
   transition-delay: 0.8s;
 }
 
-.share-button a:nth-of-type(3){
+.share-button a:nth-of-type(3) {
   transition-delay: 0.6s;
 }
 
-.share-button a:nth-of-type(4){
+.share-button a:nth-of-type(4) {
   transition-delay: 0.4s;
 }
 
-.inputbox {
-  position: relative;
-  width: 196px;
-}
-
-.inputbox input {
-  position: relative;
-  width: 100%;
-  padding: 20px 10px 10px;
-  background: transparent;
-  outline: none;
-  box-shadow: none;
-  border: none;
-  color: #23242a;
-  font-size: 1em;
-  letter-spacing: 0.05em;
-  transition: 0.5s;
-  z-index: 10;
-}
-
-.inputbox span {
-  position: absolute;
-  left: 0;
-  padding: 20px 10px 10px;
-  font-size: 1em;
-  color: #BBDB9B;
-  letter-spacing: 00.05em;
-  transition: 0.5s;
-  pointer-events: none;
-}
-
-.inputbox input:valid ~span,
-.inputbox input:focus ~span {
-  color: #BBDB9B;
-  transform: translateX(-10px) translateY(-34px);
-  font-size: 0,75em;
-}
-
-.inputbox i {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 2px;
-  background: #BBDB9B;
-  border-radius: 4px;
-  transition: 0.5s;
-  pointer-events: none;
-  z-index: 9;
-}
 
 .card {
   box-sizing: border-box;
@@ -239,11 +185,9 @@ body {
   cursor: pointer;
   transition: all 0.5s;
   display: flex;
-  
 }
 
 .card:hover {
-
   transform: scale(1.05);
 }
 
@@ -251,10 +195,6 @@ body {
   transform: scale(0.95) rotateZ(1.7deg);
 }
 
-.inputbox input:valid ~i,
-.inputbox input:focus ~i {
-  height: 44px;
-}
 
 .container input {
   position: absolute;
@@ -287,4 +227,228 @@ body {
 
 .container input:checked ~ svg {
   fill: #ffeb49;
+}
+
+
+
+.weather-map-placement{
+  z-index: 1;
+  color: aliceblue;
+  text-align: center;
+  height: 430px;
+}
+
+
+
+.weather {
+  width:90%;
+  max-width: 470px;
+  color: #fff;
+  background: linear-gradient(135deg, #00feba, #5b548a);
+  border-radius: 20px;
+  text-align: center;
+}
+
+
+.weather-icon {
+  padding: 5px;
+  transform: scale(2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+
+.humidity-wind-text{
+  font-size: 20px;
+  margin-left: -50px;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer styles */
+
+footer {
+  width: 100%;
+  height: auto;
+  background: linear-gradient(30deg, #f3f2ef, #FFF3E2);
+  margin-top: 30px;
+  font-style: bold;
+  bottom: 0;
+  font-size: 20px;
+  padding: 10px;
+  font-family: "Poppins", sans-serif;
+}
+.footer i {
+  size: 30px;
+}
+
+.footer .list-group {
+  background-color: inherit;
+}
+.footer ul li {
+  list-style: none;
+}
+.footer a {
+  text-decoration: none;
+  color: #212529;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  font-size: large;
+  
+}
+.footer form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #000000;
+  margin-bottom: 30px;
+  width: 80%;
+}
+.footer form input {
+  width: 100%;
+  background: transparent;
+  color: #000000;
+  border: 0;
+  outline: none;
+  padding: 10px;
+}
+.footer form button {
+  outline: none;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+.footer p{
+  font-family: "Poppins", sans-serif;
+  font-size: small;
+}
+
+.footer .social-icon a:hover i{
+    transform: scale(1.2);
+}
+
+
+
+
+
+
+/* header styles */
+
+.head-block {
+  position: fixed;
+  width: 100vw;
+  height: 10vh;
+  background: #e0e0e0;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+  /* background-color: inherit; */
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 9999;
+}
+.bouton {
+  border-radius: 0.25rem;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 400;
+  padding-left: 25px;
+  padding-right: 25px;
+  color: #fff;
+  -webkit-clip-path: polygon(
+    0 0,
+    0 0,
+    100% 0,
+    100% 0,
+    100% calc(100% - 15px),
+    calc(100% - 15px) 100%,
+    15px 100%,
+    0 100%
+  );
+  clip-path: polygon(
+    0 0,
+    0 0,
+    100% 0,
+    100% 0,
+    100% calc(100% - 15px),
+    calc(100% - 15px) 100%,
+    15px 100%,
+    0 100%
+  );
+  height: 40px;
+  font-size: 0.7rem;
+  line-height: 14px;
+  letter-spacing: 1.2px;
+  transition: 0.2s 0.1s;
+  background-image: linear-gradient(90deg, #1c3a13, #4d6347);
+  border: 0 solid;
+  overflow: hidden;
+}
+
+.bouton:hover {
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.bouton:active {
+  background-color: #1c3a13;
+}
+.cta {
+  border: none;
+  background: none;
+  position: relative;
+}
+
+.hover-underline-animation {
+  position: relative;
+  color: black;
+  padding-bottom: 20px;
+  font-family: "Play", sans-serif;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  font-family: "Play", sans-serif;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.cta:hover .hover-underline-animation:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  font-family: "Play", sans-serif;
+}
+
+.row {
+  padding: 1%;
+}
+
+.logo {
+  padding-left: 30px;
+  font-family: "Poppins", sans-serif;
+  color: #e14807;
+  font-weight: 400;
 }
